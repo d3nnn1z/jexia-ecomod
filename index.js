@@ -44,10 +44,8 @@ function ecomod(options) {
             if(err) throw new Error('Cannot connect to pm2');
 
             pm2.stop(app, function(error, res) {
-                if(error) throw new Error(error);
-
-                if( res.success ) {
-                    console.log('jexia-ecomod: Application stopped!');
+                if(error) {
+                    console.log(error.msg);
                 }
             });
         });

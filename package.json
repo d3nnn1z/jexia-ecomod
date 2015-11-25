@@ -1,0 +1,45 @@
+{
+  "name": "jexia-ecomod",
+  "version": "1.0.0",
+  "description": "Express middleware to automatically stop the server if it's not used after a period of time",
+  "main": "index.js",
+  "scripts": {
+    "docs": "./node_modules/.bin/jsdoc index.js",
+    "test": "./node_modules/.bin/mocha --reporter spec test/index.js",
+    "tdd": "./node_modules/.bin/mocha --reporter spec test/index.js -w",
+    "analysis": "plato -r -d report -l .jshintrc -t \"jexia-ecomod\" index.js",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jexia-com/jexia-ecomod.git"
+  },
+  "keywords": [
+    "express",
+    "middelware",
+    "green",
+    "eco",
+    "ecomod",
+    "ecomode",
+    "time interval"
+  ],
+  "author": "d3nnn1z <d3nnn1z@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jexia-com/jexia-ecomod/issues"
+  },
+  "homepage": "https://github.com/jexia-com/jexia-ecomod#readme",
+  "dependencies": {
+    "pm2": "^0.15.10"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "istanbul": "^0.4.1",
+    "jsdoc": "^3.4.0",
+    "mocha": "^2.3.4",
+    "plato": "^1.5.0",
+    "really-need": "^1.7.2",
+    "sinon": "^1.17.2",
+    "superagent": "^1.4.0"
+  }
+}

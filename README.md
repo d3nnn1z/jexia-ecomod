@@ -1,4 +1,5 @@
-# jexia-ecomod
+# jexia-ecomod [![Build Status](https://travis-ci.org/jexia-inc/jexia-ecomod.svg)](https://travis-ci.org/jexia-inc/jexia-ecomod)
+
 [Express](http://expressjs.com) friendly middleware to automatically stop the server if it's not used after a period of time.
 
 ## Installation

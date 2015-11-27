@@ -1,4 +1,4 @@
-# jexia-ecomod [![Build Status](https://travis-ci.org/jexia-inc/jexia-ecomod.svg)](https://travis-ci.org/jexia-inc/jexia-ecomod)
+# jexia-ecomod [![Build Status](https://travis-ci.org/jexia-inc/jexia-ecomod.svg)](https://travis-ci.org/jexia-inc/jexia-ecomod) [![Coverage Status](https://coveralls.io/repos/jexia-inc/jexia-ecomod/badge.svg?branch=master&service=github)](https://coveralls.io/github/jexia-inc/jexia-ecomod?branch=master)
 
 [Express](http://expressjs.com) friendly middleware to automatically stop the server if it's not used after a period of time.
 

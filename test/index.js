@@ -5,6 +5,44 @@ var request = require('supertest'),
     sinon = require('sinon'),
     expect = require('chai').expect;
 
+describe('#jexia-ecomod [ core ]', function () {
+    var ecomod = require('../index.js');
+
+    it('should have ecomod module', function(done) {
+        expect(ecomod).to.not.be.null;
+        done();
+    });
+
+    it('should be a function', function(done) {
+        expect(ecomod).to.be.a('function');
+        done();
+    });
+
+    it('should return a middleware function', function(done) {
+        var eco = ecomod({
+            interval: 1000
+        });
+        expect(eco).to.be.a('function');
+        done();
+    });
+
+    it('should return a middleware function without options', function(done) {
+        var eco = ecomod();
+        expect(eco).to.be.a('function');
+        done();
+    });
+
+    it('should return a middleware function with custom options', function(done) {
+        var eco = ecomod({
+            interval: 1000
+        });
+        expect(eco).to.be.a('function');
+        done();
+    });
+});
+
+
+
 describe('#jexia-ecomod [ without PM2 ]', function () {
     var server,
         clock,
@@ -23,7 +61,7 @@ describe('#jexia-ecomod [ without PM2 ]', function () {
     it('Sample application running normally', function(done) {
         setTimeout(function() {
             done();
-            expect(server.address()).to.be.not.null;
+            expect(server.address()).to.not.be.null;
         }, 500);
     });
 
@@ -55,7 +93,7 @@ describe('#jexia-ecomod [ with PM2 ]', function () {
     it('Sample application running normally', function(done) {
         setTimeout(function() {
             done();
-            expect(server.address()).to.be.not.null;
+            expect(server.address()).to.not.be.null;
         }, 500);
     });
 
